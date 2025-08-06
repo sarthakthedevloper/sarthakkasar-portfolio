@@ -43,7 +43,7 @@ const HeroSection = () => {
           <img
             src="/lovable-uploads/13c2ab4a-c01b-4ce6-b270-dfa2598ab38e.png"
             alt="Sarthak Kasar"
-            className="w-32 h-32 md:w-40 md:h-40 mx-auto profile-photo"
+            className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full border-2 border-slate-medium/30 object-cover object-top scale-110"
           />
         </div>
 
@@ -117,7 +117,7 @@ const HeroSection = () => {
             rel="noopener noreferrer"
             className="p-3 glass-card rounded-full hover:scale-110 transition-all duration-300 group"
           >
-            <Linkedin className="h-6 w-6 text-foreground group-hover:text-neon-blue" />
+            <Linkedin className="h-8 w-8 text-foreground group-hover:text-neon-blue" />
           </a>
           <a 
             href="mailto:sarthakkasar1629@gmail.com"

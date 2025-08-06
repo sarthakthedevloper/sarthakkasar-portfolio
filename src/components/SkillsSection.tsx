@@ -46,16 +46,16 @@ const SkillsSection = () => {
       ]
     },
     tools: {
-      title: 'Tools & Design',
+      title: 'Tools & DSA',
       icon: Palette,
       color: 'text-sunset-orange',
       skills: [
+        { name: 'Data Structures & Algorithms', level: 75 },
         { name: 'Git & GitHub', level: 90 },
         { name: 'VS Code', level: 95 },
         { name: 'Figma', level: 82 },
         { name: 'Postman', level: 85 },
         { name: 'Chrome DevTools', level: 88 },
-        { name: 'Framer Motion', level: 80 },
       ]
     }
   };
@@ -211,19 +211,19 @@ const SkillsSection = () => {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-electric-purple">Completed</h4>
+              <h4 className="text-lg font-semibold text-electric-purple">Currently Learning</h4>
               <div className="space-y-2">
-                <div className="skill-badge">React Developer Certification</div>
-                <div className="skill-badge">JavaScript ES6+ Mastery</div>
-                <div className="skill-badge">AI Integration Fundamentals</div>
+                <div className="skill-badge">Data Structures & Algorithms</div>
+                <div className="skill-badge">Advanced React Patterns</div>
+                <div className="skill-badge">System Design Fundamentals</div>
               </div>
             </div>
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-neon-blue">In Progress</h4>
+              <h4 className="text-lg font-semibold text-neon-blue">Next Goals</h4>
               <div className="space-y-2">
                 <div className="skill-badge">AWS Cloud Practitioner</div>
-                <div className="skill-badge">Advanced React Patterns</div>
-                <div className="skill-badge">Machine Learning Basics</div>
+                <div className="skill-badge">Machine Learning Advanced</div>
+                <div className="skill-badge">Full Stack Development</div>
               </div>
             </div>
           </div>

@@ -2,10 +2,8 @@
 import { useState } from 'react';
 import { ExternalLink, Github, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import project1 from '@/assets/project-1.jpg';
 import project2 from '@/assets/project-2.jpg';
 import project3 from '@/assets/project-3.jpg';
-import project4 from '@/assets/project-4.jpg';
 
 const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -13,17 +11,6 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: 'AI Resume Builder',
-      description: 'An intelligent tool that generates professional resumes using AI prompts and user input. Features real-time preview, multiple templates, and PDF export.',
-      image: project1,
-      tags: ['React', 'OpenAI API', 'TailwindCSS', 'PDF Generation'],
-      category: 'ai',
-      demoLink: '#',
-      githubLink: '#',
-      featured: true,
-    },
-    {
-      id: 2,
       title: 'SkillVerse - Course Platform',
       description: '₹9 AI-powered course platform focused on time management and skill development. Integrated payment gateway and progress tracking.',
       image: project2,
@@ -34,7 +21,7 @@ const ProjectsSection = () => {
       featured: true,
     },
     {
-      id: 3,
+      id: 2,
       title: 'Cricket Hub - Stats Visualizer',
       description: 'Real-time cricket performance visualization tool with interactive charts, player comparisons, and match analytics. Complete cricket statistics platform.',
       image: project3,
@@ -42,25 +29,13 @@ const ProjectsSection = () => {
       category: 'web',
       demoLink: 'https://www-cricket-hub.netlify.app',
       githubLink: '#',
-      featured: false,
-    },
-    {
-      id: 4,
-      title: 'AI Image Generator',
-      description: 'Creative AI tool that generates unique images from text prompts using advanced AI models. Features gallery and image editing.',
-      image: project4,
-      tags: ['React', 'OpenAI API', 'Image Processing', 'Creative AI'],
-      category: 'ai',
-      demoLink: '#',
-      githubLink: '#',
-      featured: false,
+      featured: true,
     },
   ];
 
   const filters = [
     { key: 'all', label: 'All Projects' },
     { key: 'web', label: 'Web Apps' },
-    { key: 'ai', label: 'AI Tools' },
     { key: 'featured', label: 'Featured' },
   ];
 
@@ -78,7 +53,7 @@ const ProjectsSection = () => {
             <span className="neon-text">Featured Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            A showcase of my recent work in web development and AI integration
+            A showcase of my completed work in web development
           </p>
           <div className="w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
         </div>
@@ -189,7 +164,7 @@ const ProjectsSection = () => {
         {/* More Projects Button */}
         <div className="text-center mt-12">
           <Button
-            onClick={() => window.open('#', '_blank')}
+            onClick={() => window.open('https://github.com/sarthakkasar', '_blank')}
             className="btn-glass-accent text-lg px-8 py-4 group"
           >
             <Github className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
@@ -200,10 +175,10 @@ const ProjectsSection = () => {
         {/* Project Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { number: '20+', label: 'Projects Completed' },
-            { number: '5+', label: 'AI Integrations' },
-            { number: '15+', label: 'Tech Stacks Used' },
-            { number: '100%', label: 'Client Satisfaction' },
+            { number: '2+', label: 'Projects Completed' },
+            { number: '1+', label: 'AI Integrations' },
+            { number: '10+', label: 'Tech Stacks Used' },
+            { number: '100%', label: 'Learning Progress' },
           ].map((stat, index) => (
             <div
               key={index}

@@ -115,7 +115,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-slate-medium/30">
           <div className="flex items-center gap-2 text-muted-foreground mb-4 sm:mb-0">
             <span>Made with</span>
-            <Heart className="h-4 w-4 text-red-500 animate-pulse" />
+            <Heart className="h-4 w-4 text-red-500" />
             <span>by Sarthak Kasar</span>
           </div>
 
