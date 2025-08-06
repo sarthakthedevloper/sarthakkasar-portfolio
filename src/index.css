@@ -1,96 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Sarthak's Portfolio Design System - Dark & Vibrant */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark Portfolio Color Palette */
+    --midnight: 222 84% 5%;
+    --slate-deep: 220 50% 8%;
+    --slate-medium: 220 30% 15%;
+    --slate-light: 220 20% 25%;
+    
+    /* Vibrant Neon Colors */
+    --electric-purple: 264 83% 70%;
+    --neon-blue: 217 91% 60%;
+    --lime-green: 84 81% 44%;
+    --sunset-orange: 25 95% 53%;
+    --cyber-pink: 328 85% 70%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--electric-purple)), hsl(var(--neon-blue)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--lime-green)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--cyber-pink)), hsl(var(--sunset-orange)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--midnight)), hsl(var(--slate-deep)));
+    
+    /* Glass Effects */
+    --glass-bg: hsla(220, 30%, 15%, 0.2);
+    --glass-border: hsla(220, 100%, 80%, 0.1);
+    
+    /* Shadows & Glows */
+    --glow-purple: 0 0 30px hsla(264, 83%, 70%, 0.3);
+    --glow-blue: 0 0 30px hsla(217, 91%, 60%, 0.3);
+    --glow-green: 0 0 30px hsla(84, 81%, 44%, 0.3);
+    --shadow-elegant: 0 20px 40px hsla(var(--midnight), 0.3);
+    
+    /* Standard Design Tokens */
+    --background: var(--midnight);
+    --foreground: 220 100% 95%;
+    --card: var(--slate-medium);
+    --card-foreground: 220 100% 90%;
+    --popover: var(--slate-deep);
+    --popover-foreground: 220 100% 95%;
+    --primary: var(--electric-purple);
+    --primary-foreground: 220 100% 98%;
+    --secondary: var(--slate-light);
+    --secondary-foreground: 220 100% 90%;
+    --muted: var(--slate-medium);
+    --muted-foreground: 220 30% 65%;
+    --accent: var(--neon-blue);
+    --accent-foreground: 220 100% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 100% 98%;
+    --border: var(--slate-light);
+    --input: var(--slate-medium);
+    --ring: var(--electric-purple);
+    --radius: 1rem;
   }
+  
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-[Poppins];
+    background: hsl(var(--midnight));
+    background-image: 
+      radial-gradient(circle at 20% 50%, hsla(264, 83%, 70%, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsla(217, 91%, 60%, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsla(84, 81%, 44%, 0.1) 0%, transparent 50%);
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--slate-deep));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gradient-secondary);
+  }
+}
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+@layer components {
+  /* Glassmorphic Button */
+  .btn-glass {
+    @apply relative overflow-hidden rounded-full px-8 py-3 font-medium transition-all duration-300;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+  }
+  
+  .btn-glass:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-purple);
+  }
+  
+  .btn-glass-primary {
+    @apply btn-glass;
+    background: var(--gradient-primary);
+    color: hsl(var(--primary-foreground));
+  }
+  
+  .btn-glass-secondary {
+    @apply btn-glass;
+    background: var(--gradient-secondary);
+    color: hsl(var(--primary-foreground));
+  }
+  
+  .btn-glass-accent {
+    @apply btn-glass;
+    background: var(--gradient-accent);
+    color: hsl(var(--primary-foreground));
+  }
+  
+  /* Glass Card */
+  .glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glow-blue);
+    transition: all 0.3s ease;
+  }
+  
+  /* Neon Text */
+  .neon-text {
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .neon-glow {
+    text-shadow: 0 0 10px hsla(264, 83%, 70%, 0.5);
+  }
+  
+  /* Animated Background */
+  .floating-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  /* Skill Badge */
+  .skill-badge {
+    @apply glass-card px-4 py-2 rounded-full text-sm font-medium;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+  }
+  
+  .skill-badge:hover {
+    background: var(--gradient-primary);
+    transform: scale(1.05);
+    box-shadow: var(--glow-purple);
+  }
+  
+  /* Timeline */
+  .timeline-item {
+    @apply relative pl-8;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    @apply absolute left-0 top-2 w-3 h-3 rounded-full;
+    background: var(--gradient-primary);
+    box-shadow: var(--glow-purple);
+  }
+  
+  .timeline-item::after {
+    content: '';
+    @apply absolute left-1.5 top-5 w-0.5 h-full;
+    background: var(--gradient-primary);
+    opacity: 0.3;
+  }
+  
+  /* Form Inputs */
+  .glass-input {
+    @apply w-full p-4 rounded-lg border transition-all duration-300;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    color: hsl(var(--foreground));
+  }
+  
+  .glass-input:focus {
+    outline: none;
+    border-color: hsl(var(--electric-purple));
+    box-shadow: var(--glow-purple);
+  }
+  
+  .glass-input::placeholder {
+    color: hsl(var(--muted-foreground));
   }
 }
 
