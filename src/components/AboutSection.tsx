@@ -1,3 +1,4 @@
+
 import { Code2, Brain, Users, Trophy } from 'lucide-react';
 
 const AboutSection = () => {
@@ -90,7 +91,7 @@ const AboutSection = () => {
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   <span className="skill-badge">Advanced React Patterns</span>
-                  <span className="skill-badge">LLM Integration</span>
+                  <span className="skill-badge">Healthcare AI</span>
                   <span className="skill-badge">Three.js</span>
                   <span className="skill-badge">Docker</span>
                 </div>

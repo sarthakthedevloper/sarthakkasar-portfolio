@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Send, Mail, Phone, MapPin, Github, Linkedin, Twitter, MessageCircle } from 'lucide-react';
@@ -40,15 +41,15 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'sarthak@email.com',
-      link: 'mailto:sarthak@email.com',
+      value: 'sarthakkasar1629@gmail.com',
+      link: 'mailto:sarthakkasar1629@gmail.com',
       color: 'text-electric-purple'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+91 98765 43210',
-      link: 'tel:+919876543210',
+      value: '+91 89991 36729',
+      link: 'tel:+918999136729',
       color: 'text-neon-blue'
     },
     {
@@ -267,7 +268,7 @@ const ContactSection = () => {
             {/* Availability Status */}
             <div className="glass-card p-6 text-center bg-gradient-secondary/10">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <div className="w-3 h-3 rounded-full bg-lime-green animate-pulse"></div>
+                <div className="w-3 h-3 rounded-full bg-lime-green"></div>
                 <span className="font-semibold text-lime-green">Available for new projects</span>
               </div>
               <p className="text-sm text-muted-foreground">

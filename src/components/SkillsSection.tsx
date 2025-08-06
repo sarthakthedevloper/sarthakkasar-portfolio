@@ -1,5 +1,6 @@
+
 import { useState } from 'react';
-import { Code, Database, Palette, Zap } from 'lucide-react';
+import { Code, Database, Palette, Zap, Award } from 'lucide-react';
 
 const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState('web');
@@ -147,9 +148,67 @@ const SkillsSection = () => {
 
         {/* Certifications */}
         <div className="mt-16 glass-card p-8">
-          <h3 className="text-2xl font-bold text-center mb-6">
-            <span className="neon-text">Certifications & Learning</span>
+          <h3 className="text-2xl font-bold text-center mb-8">
+            <span className="neon-text flex items-center justify-center gap-2">
+              <Award className="h-6 w-6" />
+              Certifications & Learning
+            </span>
           </h3>
+          
+          {/* Digital Health Certification - Featured */}
+          <div className="mb-8 p-6 glass-card bg-gradient-primary/10 border-2 border-electric-purple/30">
+            <div className="flex items-start gap-4 mb-4">
+              <div className="p-3 rounded-full bg-gradient-primary">
+                <Award className="h-6 w-6 text-white" />
+              </div>
+              <div className="flex-1">
+                <h4 className="text-xl font-bold text-electric-purple mb-2">
+                  Digital Health: Basics to Applications
+                </h4>
+                <p className="text-neon-blue font-medium mb-2">
+                  Koita Centre for Digital Health (KCDH), IIT Bombay
+                </p>
+                <p className="text-sm text-muted-foreground mb-3">
+                  March 31st - April 1st, 2025 • Two-Day Hands-On Workshop
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <h5 className="font-semibold text-lime-green mb-2">Key Topics Covered:</h5>
+                    <ul className="text-sm text-foreground/80 space-y-1">
+                      <li>• Machine Learning in Healthcare</li>
+                      <li>• Computer Vision for Medical Imaging</li>
+                      <li>• NLP for Clinical Decision-Making</li>
+                      <li>• Biostatistics with R-Studio</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-sunset-orange mb-2">Hands-On Experience:</h5>
+                    <ul className="text-sm text-foreground/80 space-y-1">
+                      <li>• HAM10000 Dataset Analysis</li>
+                      <li>• Transfer Learning with ResNet50</li>
+                      <li>• BERT-based Medical NLP</li>
+                      <li>• Healthcare Data Preprocessing</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-3 mt-4">
+                  <a
+                    href="https://drive.google.com/file/d/11a9D0AsFUE7vcrJRgWDHFCJGym0cBsMd/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="skill-badge bg-gradient-primary text-white hover:scale-105 transition-transform"
+                  >
+                    📜 View Certificate
+                  </a>
+                  <span className="skill-badge">🏥 AI for Social Good</span>
+                  <span className="skill-badge">🔬 Healthcare Innovation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-4">
               <h4 className="text-lg font-semibold text-electric-purple">Completed</h4>

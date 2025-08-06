@@ -1,9 +1,10 @@
+
 import { GraduationCap, Code, Brain, Rocket, Trophy, Target } from 'lucide-react';
 
 const TimelineSection = () => {
   const timelineEvents = [
     {
-      year: '2022',
+      year: '2024',
       title: 'Started IT Journey',
       description: 'Joined Vishwakarma Institute of Technology, Pune. Discovered my passion for coding and web development.',
       icon: GraduationCap,
@@ -11,7 +12,7 @@ const TimelineSection = () => {
       achievements: ['First HTML/CSS project', 'Learned programming fundamentals', 'Joined coding communities']
     },
     {
-      year: '2023',
+      year: '2024',
       title: 'First Major Web App',
       description: 'Built my first full-stack application using React and Node.js. Learned about databases and API integration.',
       icon: Code,
@@ -19,12 +20,12 @@ const TimelineSection = () => {
       achievements: ['Full-stack development', 'React expertise', 'Database design']
     },
     {
-      year: '2024',
+      year: '2025',
       title: 'AI Integration Era',
       description: 'Started working with AI APIs and machine learning. Integrated OpenAI and built intelligent applications.',
       icon: Brain,
       color: 'text-lime-green',
-      achievements: ['OpenAI API mastery', 'AI-powered apps', 'Cashfree UPI integration']
+      achievements: ['OpenAI API mastery', 'AI-powered apps', 'Digital Health Workshop at IIT Bombay']
     },
     {
       year: '2025',
@@ -79,7 +80,7 @@ const TimelineSection = () => {
                       <div className="p-4 glass-card rounded-full">
                         <event.icon className={`h-6 w-6 ${event.color}`} />
                       </div>
-                      <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20 animate-pulse"></div>
+                      <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20"></div>
                     </div>
                     
                     {/* Content */}
@@ -139,7 +140,7 @@ const TimelineSection = () => {
               </h3>
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { number: '3+', label: 'Years Coding', color: 'text-electric-purple' },
+                  { number: '2+', label: 'Years Coding', color: 'text-electric-purple' },
                   { number: '50+', label: 'Projects Built', color: 'text-neon-blue' },
                   { number: '10+', label: 'Technologies', color: 'text-lime-green' },
                   { number: '∞', label: 'Curiosity Level', color: 'text-sunset-orange' },
@@ -155,21 +156,21 @@ const TimelineSection = () => {
             </div>
 
             {/* Current Focus */}
-            <div className="glass-card p-8 bg-gradient-primary/10 border-2 border-electric-purple/30 animate-glow-pulse">
+            <div className="glass-card p-8 bg-gradient-primary/10 border-2 border-electric-purple/30">
               <h3 className="text-xl font-bold mb-4 text-electric-purple">
                 🎯 Current Focus (2025)
               </h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-lime-green animate-pulse"></div>
+                  <div className="w-2 h-2 rounded-full bg-lime-green"></div>
                   <span className="text-foreground">Building AI-powered web applications</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-neon-blue animate-pulse"></div>
+                  <div className="w-2 h-2 rounded-full bg-neon-blue"></div>
                   <span className="text-foreground">Learning advanced React patterns</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-sunset-orange animate-pulse"></div>
+                  <div className="w-2 h-2 rounded-full bg-sunset-orange"></div>
                   <span className="text-foreground">Exploring machine learning integration</span>
                 </div>
               </div>

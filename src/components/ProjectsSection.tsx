@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { ExternalLink, Github, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -34,12 +35,12 @@ const ProjectsSection = () => {
     },
     {
       id: 3,
-      title: 'Cricket Stats Visualizer',
-      description: 'Real-time cricket performance visualization tool with interactive charts, player comparisons, and match analytics.',
+      title: 'Cricket Hub - Stats Visualizer',
+      description: 'Real-time cricket performance visualization tool with interactive charts, player comparisons, and match analytics. Complete cricket statistics platform.',
       image: project3,
       tags: ['JavaScript', 'Chart.js', 'Cricket API', 'Data Visualization'],
       category: 'web',
-      demoLink: '#',
+      demoLink: 'https://www-cricket-hub.netlify.app',
       githubLink: '#',
       featured: false,
     },
