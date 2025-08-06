@@ -75,13 +75,12 @@ body {
   background: linear-gradient(135deg, hsl(var(--cyber-pink)), hsl(var(--electric-purple)));
 }
 
-/* Neon Text Effect */
+/* Neon Text Effect - Simplified */
 .neon-text {
   background: linear-gradient(135deg, hsl(var(--electric-purple)), hsl(var(--neon-blue)));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 20px hsla(var(--electric-purple), 0.3);
 }
 
 /* Button Styles */
@@ -90,7 +89,7 @@ body {
 }
 
 .btn-glass-primary {
-  @apply px-6 py-3 bg-gradient-primary text-white font-medium rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-electric-purple/30;
+  @apply px-6 py-3 bg-gradient-primary text-white font-medium rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-electric-purple/20;
 }
 
 .btn-glass-secondary {
@@ -98,12 +97,24 @@ body {
 }
 
 .btn-glass-accent {
-  @apply px-6 py-3 bg-gradient-accent text-white font-medium rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyber-pink/30;
+  @apply px-6 py-3 bg-gradient-accent text-white font-medium rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyber-pink/20;
 }
 
 /* Skill Badges */
 .skill-badge {
   @apply inline-flex items-center px-3 py-1 glass-card text-sm font-medium rounded-full border border-slate-medium/30 hover:scale-105 transition-transform duration-200;
+}
+
+/* Profile Photo - Clean and Simple */
+.profile-photo {
+  border-radius: 9999px;
+  border: 3px solid hsl(var(--electric-purple) / 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
 }
 
 /* Custom Scrollbar */
@@ -124,7 +135,7 @@ body {
   background: hsl(var(--electric-purple));
 }
 
-/* Animations */
+/* Clean Animations - No Blinking */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -169,6 +180,15 @@ body {
   }
 }
 
+@keyframes gentlePulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
   opacity: 0;
@@ -194,9 +214,14 @@ body {
   opacity: 0;
 }
 
-/* Remove excessive animations */
-.animate-glow-pulse {
-  /* Removed pulsing animation */
+/* Gentle cursor animation - no blinking */
+.typing-cursor {
+  animation: gentlePulse 2s ease-in-out infinite;
+}
+
+/* Remove all blinking animations */
+.no-blink * {
+  animation: none !important;
 }
 
 /* Smooth transitions only on hover */

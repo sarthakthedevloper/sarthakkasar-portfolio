@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Download, ExternalLink, MessageCircle, Github, Linkedin, Mail } from 'lucide-react';
@@ -37,23 +38,20 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-        {/* Profile Image */}
+        {/* Profile Image - Clean and Simple */}
         <div className="mb-8 animate-fade-in">
-          <div className="relative inline-block">
-            <img
-              src="/lovable-uploads/13c2ab4a-c01b-4ce6-b270-dfa2598ab38e.png"
-              alt="Sarthak Kasar"
-              className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto glass-card p-1 animate-glow-pulse"
-            />
-            <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20 animate-pulse"></div>
-          </div>
+          <img
+            src="/lovable-uploads/13c2ab4a-c01b-4ce6-b270-dfa2598ab38e.png"
+            alt="Sarthak Kasar"
+            className="w-32 h-32 md:w-40 md:h-40 mx-auto profile-photo"
+          />
         </div>
 
         {/* Main Heading */}
         <div className="mb-6 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">
             Hi, I'm{' '}
-            <span className="neon-text neon-glow">Sarthak Kasar</span>
+            <span className="neon-text">Sarthak Kasar</span>
           </h1>
           <div className="flex flex-wrap justify-center gap-2 md:gap-4 text-lg md:text-xl font-medium text-muted-foreground mb-6">
             <span className="skill-badge">Web Developer</span>
@@ -66,7 +64,7 @@ const HeroSection = () => {
         <div className="mb-8 animate-slide-in-left">
           <p className="text-xl md:text-2xl text-foreground/90 font-light min-h-[3rem] flex items-center justify-center">
             {displayText}
-            <span className="ml-1 animate-pulse">|</span>
+            <span className="ml-1 typing-cursor">|</span>
           </p>
         </div>
 
@@ -88,7 +86,7 @@ const HeroSection = () => {
             View Projects
           </Button>
           <Button 
-            onClick={() => window.open('#', '_blank')}
+            onClick={() => window.open('https://drive.google.com/file/d/11a9D0AsFUE7vcrJRgWDHFCJGym0cBsMd/view?usp=sharing', '_blank')}
             className="btn-glass-secondary text-lg px-8 py-6 group"
           >
             <Download className="mr-2 h-5 w-5 group-hover:bounce transition-transform" />
@@ -122,7 +120,7 @@ const HeroSection = () => {
             <Linkedin className="h-6 w-6 text-foreground group-hover:text-neon-blue" />
           </a>
           <a 
-            href="mailto:sarthak@email.com"
+            href="mailto:sarthakkasar1629@gmail.com"
             className="p-3 glass-card rounded-full hover:scale-110 transition-all duration-300 group"
           >
             <Mail className="h-6 w-6 text-foreground group-hover:text-lime-green" />
@@ -132,7 +130,7 @@ const HeroSection = () => {
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-electric-purple rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-gradient-primary rounded-full mt-2 animate-pulse"></div>
+            <div className="w-1 h-3 bg-gradient-primary rounded-full mt-2"></div>
           </div>
         </div>
       </div>
