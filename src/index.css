@@ -6,6 +6,7 @@
 
 @layer base {
   :root {
+    /* Dark Theme (Default) */
     --background: 210 40% 8%;
     --foreground: 210 40% 98%;
     --card: 210 40% 10%;
@@ -31,11 +32,46 @@
     --midnight: 220 27% 6%;
     --slate-deep: 215 25% 8%;
     --slate-medium: 215 20% 15%;
+    --slate-light: 215 15% 25%;
     --electric-purple: 271 81% 56%;
     --neon-blue: 217 91% 60%;
     --lime-green: 84 81% 44%;
     --sunset-orange: 25 95% 53%;
     --cyber-pink: 330 81% 60%;
+  }
+
+  .light {
+    /* Light Theme Colors */
+    --background: 210 20% 98%;
+    --foreground: 210 20% 12%;
+    --card: 210 20% 96%;
+    --card-foreground: 210 20% 15%;
+    --popover: 210 20% 96%;
+    --popover-foreground: 210 20% 15%;
+    --primary: 210 20% 15%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 210 20% 90%;
+    --secondary-foreground: 210 20% 15%;
+    --muted: 210 20% 92%;
+    --muted-foreground: 210 20% 45%;
+    --accent: 210 20% 94%;
+    --accent-foreground: 210 20% 15%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 210 20% 85%;
+    --input: 210 20% 90%;
+    --ring: 210 20% 15%;
+
+    /* Custom Light Theme Colors */
+    --midnight: 210 20% 96%;
+    --slate-deep: 210 15% 94%;
+    --slate-medium: 210 10% 88%;
+    --slate-light: 210 8% 82%;
+    --electric-purple: 271 60% 45%;
+    --neon-blue: 217 70% 50%;
+    --lime-green: 84 60% 35%;
+    --sunset-orange: 25 80% 45%;
+    --cyber-pink: 330 60% 50%;
   }
 }
 
@@ -51,11 +87,16 @@ body {
 
 /* Glass Morphism Effects */
 .glass-card {
-  background: hsla(215, 25%, 12%, 0.7);
+  background: hsla(var(--slate-deep), 0.7);
   backdrop-filter: blur(16px);
-  border: 1px solid hsla(215, 20%, 20%, 0.4);
+  border: 1px solid hsla(var(--slate-medium), 0.4);
   border-radius: 16px;
   transition: all 0.3s ease;
+}
+
+.light .glass-card {
+  background: hsla(var(--card), 0.8);
+  border: 1px solid hsla(var(--border), 0.6);
 }
 
 .glass-input {
@@ -227,4 +268,139 @@ body {
 /* Smooth transitions only on hover */
 .transition-smooth {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced hover effects */
+.hover-glow:hover {
+  box-shadow: 0 0 30px hsla(var(--electric-purple), 0.3);
+  transform: translateY(-2px);
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.hover-tilt:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+}
+
+/* Ripple effect */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: hsla(var(--electric-purple), 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.ripple:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Parallax effect */
+.parallax {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Progress bars */
+.progress-bar {
+  background: linear-gradient(90deg, 
+    hsl(var(--electric-purple)), 
+    hsl(var(--neon-blue))
+  );
+  border-radius: 9999px;
+  height: 8px;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Skill circles */
+.skill-circle {
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 1.5s ease-in-out;
+}
+
+/* Enhanced animations */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-slide-in-top {
+  animation: slideInFromTop 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-slide-in-bottom {
+  animation: slideInFromBottom 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-rotate-in {
+  animation: rotateIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.8s ease-out forwards;
+  opacity: 0;
 }

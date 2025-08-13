@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Home, User, Code, Briefcase, MapPin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from './ThemeToggle';
+import { motion } from 'framer-motion';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,36 +68,44 @@ const Navigation = () => {
                 onClick={() => scrollToSection('#')}
                 className="text-2xl font-bold neon-text hover:scale-105 transition-transform"
               >
-                Sarthak.dev
+                Sarthak.codes
               </button>
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6">
               {navItems.map((item) => (
-                <button
+                <motion.button
                   key={item.id}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   onClick={() => scrollToSection(item.href)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium transition-all duration-300 ${
                     activeSection === item.id
                       ? 'btn-glass-primary'
-                      : 'text-foreground hover:text-electric-purple hover:scale-105'
+                      : 'text-foreground hover:text-electric-purple'
                   }`}
                 >
                   <item.icon className="h-4 w-4" />
                   {item.label}
-                </button>
+                </motion.button>
               ))}
+              <ThemeToggle />
             </div>
 
-            {/* Mobile Menu Button */}
-            <Button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden btn-glass"
-              size="sm"
-            >
-              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </Button>
+            {/* Mobile Menu & Theme Toggle */}
+            <div className="md:hidden flex items-center gap-3">
+              <ThemeToggle />
+              <motion.div whileTap={{ scale: 0.95 }}>
+                <Button
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  className="btn-glass"
+                  size="sm"
+                >
+                  {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                </Button>
+              </motion.div>
+            </div>
           </div>
         </div>
       </nav>

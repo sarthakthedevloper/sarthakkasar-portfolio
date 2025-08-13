@@ -1,16 +1,22 @@
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
-import SkillsSection from '@/components/SkillsSection';
+import EnhancedSkillsSection from '@/components/EnhancedSkillsSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import TimelineSection from '@/components/TimelineSection';
-import ContactSection from '@/components/ContactSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import EnhancedContactSection from '@/components/EnhancedContactSection';
 import Footer from '@/components/Footer';
 import FloatingParticles from '@/components/FloatingParticles';
+import AnimatedBackground from '@/components/AnimatedBackground';
+import { ScrollToTop } from '@/components/ScrollToTop';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background font-poppins">
+      {/* Animated Background */}
+      <AnimatedBackground />
+      
       {/* Floating Background Particles */}
       <FloatingParticles />
       
@@ -21,14 +27,18 @@ const Index = () => {
       <main>
         <HeroSection />
         <AboutSection />
-        <SkillsSection />
+        <EnhancedSkillsSection />
         <ProjectsSection />
         <TimelineSection />
-        <ContactSection />
+        <TestimonialsSection />
+        <EnhancedContactSection />
       </main>
       
       {/* Footer */}
       <Footer />
+      
+      {/* Scroll to Top */}
+      <ScrollToTop />
     </div>
   );
 };
