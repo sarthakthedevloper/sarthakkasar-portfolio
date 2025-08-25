@@ -24,7 +24,7 @@ const ProjectsSection = () => {
       id: 2,
       title: 'Cricket Hub - Stats Visualizer',
       description: 'Real-time cricket performance visualization tool with interactive charts, player comparisons, and match analytics. Complete cricket statistics platform.',
-      image: project3,
+      image: '/lovable-uploads/cdb57f09-85ad-43a3-957f-18a4116db8e0.png',
       tags: ['JavaScript', 'Chart.js', 'Cricket API', 'Data Visualization'],
       category: 'web',
       demoLink: 'https://www-cricket-hub.netlify.app',
@@ -175,7 +175,7 @@ const ProjectsSection = () => {
         {/* Project Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { number: '2+', label: 'Projects Completed' },
+            { number: '5+', label: 'Projects Completed' },
             { number: '1+', label: 'AI Integrations' },
             { number: '10+', label: 'Tech Stacks Used' },
             { number: '100%', label: 'Learning Progress' },
