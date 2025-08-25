@@ -141,7 +141,7 @@ const TimelineSection = () => {
               <div className="grid grid-cols-2 gap-6">
                 {[
                   { number: '2+', label: 'Years Coding', color: 'text-electric-purple' },
-                  { number: '50+', label: 'Projects Built', color: 'text-neon-blue' },
+                  { number: '5+', label: 'Projects Built', color: 'text-neon-blue' },
                   { number: '10+', label: 'Technologies', color: 'text-lime-green' },
                   { number: '∞', label: 'Curiosity Level', color: 'text-sunset-orange' },
                 ].map((stat, index) => (
