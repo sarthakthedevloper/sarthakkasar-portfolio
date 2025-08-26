@@ -39,12 +39,6 @@ const ContactSection = () => {
       link: "mailto:sarthakkasar1629@gmail.com"
     },
     {
-      icon: Phone,
-      label: "Phone",
-      value: "+91 89991 36729",
-      link: "tel:+918999136729"
-    },
-    {
       icon: MapPin,
       label: "Location",
       value: "Pune, Maharashtra, India",
