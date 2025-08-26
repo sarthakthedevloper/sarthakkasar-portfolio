@@ -37,9 +37,9 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center pt-24 md:pt-28">
         {/* Profile Image - Clean and Simple */}
-        <div className="mb-8 animate-fade-in">
+        <div className="mb-12 md:mb-16 animate-fade-in">
           <img
             src="/lovable-uploads/13c2ab4a-c01b-4ce6-b270-dfa2598ab38e.png"
             alt="Sarthak Kasar"
