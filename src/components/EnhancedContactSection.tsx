@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { 
-  Mail, Phone, MapPin, Send, CheckCircle, 
+  Mail, MapPin, Send, CheckCircle, 
   Github, Linkedin, ExternalLink, MessageCircle 
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -15,13 +15,6 @@ const contactInfo = [
     value: "sarthakkasar1629@gmail.com",
     href: "mailto:sarthakkasar1629@gmail.com",
     color: "lime-green"
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+91 89991 36729",
-    href: "tel:+918999136729",
-    color: "neon-blue"
   },
   {
     icon: MapPin,
