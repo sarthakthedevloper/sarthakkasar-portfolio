@@ -98,12 +98,6 @@ const Footer = () => {
               >
                 sarthakkasar1629@gmail.com
               </a>
-              <a 
-                href="tel:+918999136729"
-                className="block text-muted-foreground hover:text-foreground transition-colors"
-              >
-                +91 89991 36729
-              </a>
               <p className="text-muted-foreground">
                 Pune, Maharashtra, India
               </p>
