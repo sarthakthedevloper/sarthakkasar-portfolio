@@ -33,7 +33,10 @@ const HeroSection = () => {
           backgroundImage: `url(${heroBackground})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-midnight/80 via-midnight/60 to-slate-deep/80"></div>
+        {/* Dark mode overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-midnight/80 via-midnight/60 to-slate-deep/80 dark:block hidden"></div>
+        {/* Light mode overlay - clean professional look */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-slate-50/85 to-blue-50/90 dark:hidden"></div>
       </div>
 
       {/* Content */}
@@ -43,34 +46,34 @@ const HeroSection = () => {
           <img
             src="/lovable-uploads/13c2ab4a-c01b-4ce6-b270-dfa2598ab38e.png"
             alt="Sarthak Kasar"
-            className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full border-2 border-slate-medium/30 object-cover object-top scale-110"
+            className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full border-3 border-electric-purple/40 dark:border-slate-medium/30 object-cover object-top scale-110 shadow-xl dark:shadow-electric-purple/20 shadow-electric-purple/30"
           />
         </div>
 
         {/* Main Heading */}
         <div className="mb-6 animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-foreground">
             Hi, I'm{' '}
             <span className="neon-text">Sarthak Kasar</span>
           </h1>
           <div className="flex flex-wrap justify-center gap-2 md:gap-4 text-lg md:text-xl font-medium text-muted-foreground mb-6">
-            <span className="skill-badge">Web Developer</span>
-            <span className="skill-badge">AI Explorer</span>
-            <span className="skill-badge">Tech Enthusiast</span>
+            <span className="skill-badge bg-white/60 dark:bg-transparent shadow-sm dark:shadow-none">Web Developer</span>
+            <span className="skill-badge bg-white/60 dark:bg-transparent shadow-sm dark:shadow-none">AI Explorer</span>
+            <span className="skill-badge bg-white/60 dark:bg-transparent shadow-sm dark:shadow-none">Tech Enthusiast</span>
           </div>
         </div>
 
         {/* Typing Animation */}
         <div className="mb-8 animate-slide-in-left">
-          <p className="text-xl md:text-2xl text-foreground/90 font-light min-h-[3rem] flex items-center justify-center">
+          <p className="text-xl md:text-2xl text-foreground font-light min-h-[3rem] flex items-center justify-center">
             {displayText}
-            <span className="ml-1 typing-cursor">|</span>
+            <span className="ml-1 typing-cursor text-electric-purple">|</span>
           </p>
         </div>
 
         {/* Subtext */}
         <div className="mb-12 animate-slide-in-right">
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-foreground/70 dark:text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             I build beautiful and powerful websites using cutting-edge technologies & AI. 
             Passionate about learning, cricket, and crafting digital solutions that matter.
           </p>
@@ -107,7 +110,7 @@ const HeroSection = () => {
             href="https://github.com/sarthakkasar" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="p-3 glass-card rounded-full hover:scale-110 transition-all duration-300 group"
+            className="p-3 glass-card bg-white/50 dark:bg-transparent rounded-full hover:scale-110 transition-all duration-300 group shadow-md dark:shadow-none"
           >
             <Github className="h-6 w-6 text-foreground group-hover:text-electric-purple" />
           </a>
@@ -115,13 +118,13 @@ const HeroSection = () => {
             href="https://linkedin.com/in/sarthakkasar" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="p-3 glass-card rounded-full hover:scale-110 transition-all duration-300 group"
+            className="p-3 glass-card bg-white/50 dark:bg-transparent rounded-full hover:scale-110 transition-all duration-300 group shadow-md dark:shadow-none"
           >
             <Linkedin className="h-8 w-8 text-foreground group-hover:text-neon-blue" />
           </a>
           <a 
             href="mailto:sarthakkasar1629@gmail.com"
-            className="p-3 glass-card rounded-full hover:scale-110 transition-all duration-300 group"
+            className="p-3 glass-card bg-white/50 dark:bg-transparent rounded-full hover:scale-110 transition-all duration-300 group shadow-md dark:shadow-none"
           >
             <Mail className="h-6 w-6 text-foreground group-hover:text-lime-green" />
           </a>
