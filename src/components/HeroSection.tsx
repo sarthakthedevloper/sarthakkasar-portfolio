@@ -86,10 +86,10 @@ const HeroSection = () => {
             View Projects
           </Button>
           <Button 
-            onClick={() => window.open('https://drive.google.com/file/d/11a9D0AsFUE7vcrJRgWDHFCJGym0cBsMd/view?usp=sharing', '_blank')}
-            className="btn-glass-secondary text-lg px-8 py-6 group"
+            disabled
+            className="btn-glass-secondary text-lg px-8 py-6 opacity-50 cursor-not-allowed"
           >
-            <Download className="mr-2 h-5 w-5 group-hover:bounce transition-transform" />
+            <Download className="mr-2 h-5 w-5" />
             Download Resume
           </Button>
           <Button 
