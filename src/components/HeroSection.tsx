@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Download, ExternalLink, MessageCircle, Github, Linkedin, Mail } from 'lucide-react';
+import { Download, ExternalLink, MessageCircle, Github, Linkedin, Mail, FileText } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import heroBackground from '@/assets/hero-bg.jpg';
 
 const HeroSection = () => {
@@ -80,7 +80,7 @@ const HeroSection = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-scale-in">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-scale-in flex-wrap">
           <Button 
             onClick={() => scrollToSection('projects')}
             className="btn-glass-primary text-lg px-8 py-6 group"
@@ -88,13 +88,37 @@ const HeroSection = () => {
             <ExternalLink className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
             View Projects
           </Button>
-          <Button 
-            disabled
-            className="btn-glass-secondary text-lg px-8 py-6 opacity-50 cursor-not-allowed"
-          >
-            <Download className="mr-2 h-5 w-5" />
-            Download Resume
-          </Button>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a
+                  href="/resume/sarthak-kasar-resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-glass-secondary text-lg px-8 py-6 inline-flex items-center justify-center group hover:border-neon-blue/60"
+                >
+                  <FileText className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  View Resume
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>Open resume in new tab</TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a
+                  href="/resume/sarthak-kasar-resume.pdf"
+                  download="Sarthak-Kasar-Resume.pdf"
+                  className="btn-glass-secondary text-lg px-8 py-6 inline-flex items-center justify-center group hover:border-electric-purple/60"
+                >
+                  <Download className="mr-2 h-5 w-5 group-hover:translate-y-0.5 transition-transform" />
+                  Download Resume
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>Download PDF</TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
           <Button 
             onClick={() => scrollToSection('contact')}
             className="btn-glass-accent text-lg px-8 py-6 group"
