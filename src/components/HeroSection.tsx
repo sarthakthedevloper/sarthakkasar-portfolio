@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
 import { Download, ExternalLink, MessageCircle, Github, Linkedin, Mail, FileText } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import heroBackground from '@/assets/hero-bg.jpg';
