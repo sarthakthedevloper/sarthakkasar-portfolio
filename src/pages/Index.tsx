@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import EnhancedSkillsSection from '@/components/EnhancedSkillsSection';
 import ProjectsSection from '@/components/ProjectsSection';
+import AchievementsSection from '@/components/AchievementsSection';
 import TimelineSection from '@/components/TimelineSection';
 import EnhancedContactSection from '@/components/EnhancedContactSection';
 import Footer from '@/components/Footer';
@@ -28,6 +29,7 @@ const Index = () => {
         <AboutSection />
         <EnhancedSkillsSection />
         <ProjectsSection />
+        <AchievementsSection />
         <TimelineSection />
         <EnhancedContactSection />
       </main>
